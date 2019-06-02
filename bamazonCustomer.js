@@ -29,6 +29,17 @@ var connection = mysql.createConnection({
     })
 };
 
+function numberValidation(value) {
+	var integer = Number.isInteger(parseFloat(value));
+	var sign = Math.sign(value);
+
+	if (integer && (sign === 1)) {
+		return true;
+	} else {
+		return 'Please enter a whole non-zero number.';
+	}
+}
+
 function runSearch() {
     inquirer
     .prompt({
@@ -63,20 +74,22 @@ function checkID(){
 		{
 			type: 'input',
 			name: 'id',
-			message: 'Please enter the Item ID which you would like to purchase.',
+            message: 'Please enter the Item ID which you would like to purchase.',
+            validate: numberValidation,
 			filter: Number
 		},
 		{
 			type: 'input',
 			name: 'quantity',
-			message: 'How many do you need?',
+            message: 'How many do you need?',
+            validate: numberValidation,
 			filter: Number
 		}
     ]).then(function(input) {
-        var query = "SELECT * FROM products";
+        var query = "SELECT * FROM products WHERE ?";
         var item = input.id;
         var quantity = input.quantity;
-        connection.query(query, {item_id: item}, function(err, data) {
+        connection.query(query, {id: item}, function(err, data) {
 			if (err) throw err;
 
 			if (data.length === 0) {

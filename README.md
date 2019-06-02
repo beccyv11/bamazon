@@ -24,3 +24,7 @@ Step 4 Tells the user if there is enough of the product they inquired about in s
 ![Step4](/Images/Step4.png)
 
 ![Step5](/Images/Final.png)
+
+See below for error messages when an ivalid ID is entered. 
+
+![error](/Images/error.png)
