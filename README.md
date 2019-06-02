@@ -7,7 +7,7 @@ It uses Inquirer to prompt the user to select an item for their purchase and use
 
 Step 1 Run the CLI in a node run time environment: 
 
- ![Step1](/Images/Step 1.png)
+ ![Step1](/Images/Step1.png)
 
 Step 2 Select one of three options: 
 1. See Inventory
@@ -16,11 +16,11 @@ Step 2 Select one of three options:
 
 
 Step 3 Prompts the user what they would like to buy and how much. 
-![Step2](/Images/Step 2.png)
-![Step3](/Images/Step 3.png)
+![Step2](/Images/Step2.png)
+![Step3](/Images/Step3.png)
 
 Step 4 Tells the user if there is enough of the product they inquired about in stock. 
 
-![Step4](/Images/Step 4.png)
+![Step4](/Images/Step4.png)
 
 ![Step5](/Images/Final.png)
